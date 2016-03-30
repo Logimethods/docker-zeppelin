@@ -15,4 +15,5 @@ zeppelin:
   volumes:
     - ./data:/zeppelin/data
     - ./notebooks:/zeppelin/notebook
+    - ./conf:/zeppelin/conf
 
