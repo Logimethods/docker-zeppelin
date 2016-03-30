@@ -16,4 +16,5 @@ zeppelin:
     - ./data:/zeppelin/data
     - ./notebooks:/zeppelin/notebook
     - ./conf:/zeppelin/conf
+    - ./libs:/zeppelin/libs
 
