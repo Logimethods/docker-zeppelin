@@ -1,7 +1,7 @@
 {
   "paragraphs": [
     {
-      "text": "%dep \nz.load(\"/zeppelin/provided-libs/cisri-spark-experiment-0.0.2-SNAPSHOT.jar\")",
+      "text": "%dep \nz.load(\"/zeppelin/libs/cisri-spark-experiment-0.0.2-SNAPSHOT.jar\")",
       "dateUpdated": "Mar 30, 2016 5:01:02 PM",
       "config": {
         "tableHide": false,
