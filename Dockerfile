@@ -22,7 +22,7 @@ RUN ln -s $ZEPPELIN_HOME $ZEPPELIN_ALT
 VOLUME $ZEPPELIN_ALT/data
 VOLUME $ZEPPELIN_ALT/notebook
 VOLUME $ZEPPELIN_ALT/libs
-#    - ./conf:/zeppelin/conf
+VOLUME $ZEPPELIN_ALT/conf
 
 CMD cp -r -u $ZEPPELIN_HOME/provided-notebook/* $ZEPPELIN_HOME/notebook/ ; cp -r -u $ZEPPELIN_HOME/provided-libs/* $ZEPPELIN_HOME/libs/ ; ./bin/zeppelin.sh start
 
