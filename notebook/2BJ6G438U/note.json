@@ -1,6 +1,41 @@
 {
   "paragraphs": [
     {
+      "text": "%dep \nz.load(\"/zeppelin/libs/cisri-spark-experiment-0.0.2-SNAPSHOT.jar\")\nz.load(\"/zeppelin/libs/spark-cassandra-connector-java-assembly-1.6.0-M1.jar\")",
+      "authenticationInfo": {},
+      "dateUpdated": "Apr 1, 2016 5:56:00 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1459533167072_127297589",
+      "id": "20160401-175247_55203428",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "DepInterpreter(%dep) deprecated. Load dependency through GUI interpreter menu instead.\nres0: org.apache.zeppelin.dep.Dependency \u003d org.apache.zeppelin.dep.Dependency@530dd5e5\n"
+      },
+      "dateCreated": "Apr 1, 2016 5:52:47 PM",
+      "dateStarted": "Apr 1, 2016 5:56:00 PM",
+      "dateFinished": "Apr 1, 2016 5:56:10 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
       "text": "%cassandra\nselect * from power_data.shift_aggregate_demand  where usagepointpk \u003d 1001001 and year\u003d2014 and month \u003d 1 and shift\u003d0;",
       "authenticationInfo": {},
       "dateUpdated": "Apr 1, 2016 2:27:03 PM",
