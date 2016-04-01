@@ -10,10 +10,10 @@ RUN git pull; git reset --hard 0ee791ce29b2c72b6c662d5e1e154fb8dde8c60e
 #git checkout branch-0.5.6
 RUN mvn clean package -DskipTests -Pspark-1.6 -Dspark.version=1.6.1
 
-COPY ./provided-libs $ZEPPELIN_HOME/provided-libs/
+COPY ./libs $ZEPPELIN_HOME/provided-libs/
 RUN ls $ZEPPELIN_HOME/provided-libs/
 
-COPY ./provided-notebook $ZEPPELIN_HOME/provided-notebook/
+COPY ./notebook $ZEPPELIN_HOME/provided-notebook/
 RUN ls $ZEPPELIN_HOME/provided-notebook/
 
 ENV ZEPPELIN_ALT         /zeppelin
