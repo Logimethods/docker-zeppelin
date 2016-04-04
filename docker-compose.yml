@@ -1,5 +1,14 @@
+cassandra:
+  image: logimethods/docker-cassandra
+  ports:
+    - 7000:7000
+    - 7001:7001
+    - 7199:7199
+    - 9042:9042
+    - 9160:9160
 zeppelin:
-  image: logimethods/docker-zeppelin:latest
+#  image: logimethods/docker-zeppelin:latest
+  image: local-docker-zeppelin:experiment
   ports:
     - 8080:8080
     - 8081:8081
@@ -8,4 +17,6 @@ zeppelin:
     - ./notebook:/zeppelin/notebook
     - ./conf:/zeppelin/conf
     - ./libs:/zeppelin/libs
+  links: 
+    - cassandra
 
