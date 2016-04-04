@@ -20,8 +20,8 @@ RUN mvn clean package -DskipTests -Pspark-1.6 -Dspark.version=1.6.1
 
 # TODO (?) Build [embedded] spark-cassandra-connector from Git (https://github.com/datastax/spark-cassandra-connector/blob/master/doc/12_building_and_artifacts.md)?
 
-COPY ./conf $ZEPPELIN_HOME/provided-conf/
-RUN ls $ZEPPELIN_HOME/provided-conf/
+#COPY ./conf $ZEPPELIN_HOME/provided-conf/
+#RUN ls $ZEPPELIN_HOME/provided-conf/
 
 COPY ./libs $ZEPPELIN_HOME/provided-libs/
 RUN ls $ZEPPELIN_HOME/provided-libs/
@@ -35,6 +35,7 @@ RUN ln -s $ZEPPELIN_HOME $ZEPPELIN_ALT
 VOLUME $ZEPPELIN_ALT/data
 VOLUME $ZEPPELIN_ALT/notebook
 VOLUME $ZEPPELIN_ALT/libs
-VOLUME $ZEPPELIN_ALT/conf
+#VOLUME $ZEPPELIN_ALT/conf
 
-CMD cp -r -u $ZEPPELIN_HOME/provided-conf/* $ZEPPELIN_HOME/conf/ ; cp -r -u $ZEPPELIN_HOME/provided-notebook/* $ZEPPELIN_HOME/notebook/ ; cp -r -u $ZEPPELIN_HOME/provided-libs/* $ZEPPELIN_HOME/libs/ ; ./bin/zeppelin.sh start
+#cp -r -u $ZEPPELIN_HOME/provided-conf/* $ZEPPELIN_HOME/conf/ ; 
+CMD cp -r -u $ZEPPELIN_HOME/provided-notebook/* $ZEPPELIN_HOME/notebook/ ; cp -r -u $ZEPPELIN_HOME/provided-libs/* $ZEPPELIN_HOME/libs/ ; ./bin/zeppelin.sh start

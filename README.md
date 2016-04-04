@@ -1,7 +1,7 @@
 # docker-zeppelin
 Logimethods' Zeppelin on Docker
 
-##To build the Cassandra Connector lib (spark-cassandra-connector-assembly-*.jar):
+## To build the Cassandra Connector lib (spark-cassandra-connector-assembly-*.jar):
 
     github-mac://openRepo/https://github.com/datastax/spark-cassandra-connector
     
