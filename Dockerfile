@@ -46,4 +46,4 @@ VOLUME $ZEPPELIN_ALT/libs
 #VOLUME $ZEPPELIN_ALT/conf
 
 #cp -r -u $ZEPPELIN_HOME/provided-conf/* $ZEPPELIN_HOME/conf/ ; 
-CMD cp -r -u $ZEPPELIN_HOME/provided-notebook/* $ZEPPELIN_HOME/notebook/ ; cp -r -u $ZEPPELIN_HOME/provided-libs/* $ZEPPELIN_HOME/libs/ ; ./bin/zeppelin.sh start
+CMD ./start-zeppelin-linked.sh
