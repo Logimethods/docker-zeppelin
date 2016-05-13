@@ -10,5 +10,6 @@ cd /incubator-zeppelin/
 cp -r -u ./provided-notebook/* ./notebook/
 cp -r -u ./provided-libs/* ./libs/
 ./bin/zeppelin-daemon.sh start
-/bin/bash
+#/bin/bash
+sleep infinity
 
