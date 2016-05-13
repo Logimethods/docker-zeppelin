@@ -6,7 +6,7 @@ cat tmpHosts > /etc/hosts
 rm tmpHosts
 
 export MASTER=spark://${SPARK_MASTER_PORT_7077_TCP_ADDR}:${SPARK_MASTER_ENV_SPARK_MASTER_PORT}
-cd incubator-zeppelin/
+cd /incubator-zeppelin/
 cp -r -u ./provided-notebook/* ./notebook/
 cp -r -u ./provided-libs/* ./libs/
 ./bin/zeppelin-daemon.sh start

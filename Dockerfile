@@ -46,4 +46,4 @@ VOLUME $ZEPPELIN_ALT/libs
 #VOLUME $ZEPPELIN_ALT/conf
 
 #cp -r -u $ZEPPELIN_HOME/provided-conf/* $ZEPPELIN_HOME/conf/ ; 
-CMD ./start-zeppelin-linked.sh
+CMD /start-script.sh
