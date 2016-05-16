@@ -27,8 +27,6 @@ ADD scripts/start-script.sh /start-script.sh
 ADD scripts/configured_env.sh /configured_env.sh
 RUN /usr/local/bin/warm_maven.sh 
 
-EXPOSE 8080 8081 9080 9081
-
 # ZEPPELIN
 ENV ZEPPELIN_HOME         /incubator-zeppelin
 
@@ -44,6 +42,9 @@ VOLUME $ZEPPELIN_ALT/data
 VOLUME $ZEPPELIN_ALT/notebook
 VOLUME $ZEPPELIN_ALT/libs
 #VOLUME $ZEPPELIN_ALT/conf
+
+EXPOSE 9080 9081
+RUN export ZEPPELIN_PORT=9080
 
 #cp -r -u $ZEPPELIN_HOME/provided-conf/* $ZEPPELIN_HOME/conf/ ; 
 CMD /start-script.sh
