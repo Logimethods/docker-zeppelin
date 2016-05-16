@@ -27,7 +27,7 @@ ADD scripts/start-script.sh /start-script.sh
 ADD scripts/configured_env.sh /configured_env.sh
 RUN /usr/local/bin/warm_maven.sh 
 
-EXPOSE 8080 8081
+EXPOSE 8080 8081 9080 9081
 
 # ZEPPELIN
 ENV ZEPPELIN_HOME         /incubator-zeppelin
